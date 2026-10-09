@@ -16,6 +16,21 @@
     @media(max-width:900px){.nav{grid-template-columns:1fr auto}.navlinks{display:none}.navright{grid-column:2}.menu-toggle{display:inline-grid;place-items:center}.navright>.btn{display:none}.navlinks.open{display:flex;position:fixed;top:76px;left:0;right:0;background:var(--paper);padding:26px 24px 30px;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start;gap:24px}.navlinks.open a{font-size:13px}.hero-grid{grid-template-columns:1fr;gap:8px}.hero-copy{max-width:520px}.hero-art{margin-top:38px;min-height:250px}.bio-grid,.expertise-grid,.contact-grid{grid-template-columns:1fr;gap:30px}.bio-label{position:static}.review-grid{grid-template-columns:1fr}.review-card{min-height:170px}.pricing-grid{grid-template-columns:1fr}.price-card{min-height:unset}.section{padding:78px 0}.section-head{align-items:flex-start;flex-direction:column;margin-bottom:30px}.section-head p{max-width:480px}}
     @media(max-width:600px){.wrap{width:calc(100% - 32px)}.nav{min-height:66px}.navlinks.open{top:66px}.brand{font-size:12px}.brand-mark{width:31px;height:31px}.hero{padding:68px 0 38px}h1{font-size:clamp(3.65rem,17vw,6.2rem);margin-bottom:25px}.hero-copy p{font-size:16px}.intro-strip{grid-template-columns:1fr;margin-top:45px}.intro-stat,.intro-stat:not(:first-child){padding:15px 0;border-right:0;border-bottom:1px solid var(--line)}.intro-stat:last-child{border-bottom:0}.intro-stat strong{font-size:21px}.section{padding:64px 0}.section-head h2{font-size:clamp(2.8rem,13vw,4.6rem)}.project-grid{grid-template-columns:1fr}.project-card{padding:22px;min-height:unset}.project-card h3{font-size:2.3rem}.project-meta{gap:22px}.project-results span{font-size:9px}.hero-art{min-height:220px}.bio-copy h2{font-size:clamp(3rem,13vw,5rem)}.expertise-copy h2{font-size:3.2rem}.price-card{padding:22px}.contact-title h2{font-size:clamp(3.2rem,15vw,5.3rem)}.footer-inner{align-items:flex-start;flex-direction:column;gap:16px}.footer-links{gap:14px}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
+    .bio-brand-art{margin-top:34px;min-height:250px;max-width:360px;padding:28px 24px;background:#080808;color:#f7f7f8;border:1px solid #080808;border-radius:22px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:14px;overflow:hidden}
+    .bio-brand-mark{display:grid;place-items:center;width:116px;height:116px;border:1px solid rgba(255,255,255,.25);border-radius:18px;padding:15px}
+    .bio-brand-mark svg{display:block;width:100%;height:100%}
+    .bio-brand-name{font-size:clamp(2rem,4vw,3rem);font-weight:700;line-height:.82;letter-spacing:-.08em}
+    .bio-brand-caption{font:10px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:#bdbdbd}
+    /* Consistent rounded framing across site cards and boxed components. */
+    .hero-art,.intro-strip,.intro-stat,.project-card,.project-symbol,.review-card,.price-card,.bio-brand-art,.bio-brand-mark,.pill,.btn,.contact-link,.brand-mark,.menu-toggle{border-radius:16px}
+    .hero-art{border-radius:22px}
+    .project-card,.review-card,.price-card{overflow:hidden}
+    .project-symbol{border-radius:12px}
+    .btn{border-radius:999px}
+    .pill{border-radius:999px}
+    .brand-mark,.menu-toggle{border-radius:10px}
+    .intro-strip{overflow:hidden}
+    @media(max-width:900px){.bio-brand-art{max-width:100%;min-height:220px}.bio-brand-mark{width:96px;height:96px}}
     /* Remove ornamental divider/rule lines while preserving card boundaries. */
     .eyebrow:before,.bio-bottom:before,.navlinks a:after{display:none!important}
     .topbar{border-bottom:0}
@@ -68,7 +83,15 @@
 
     <section class="section" id="about">
       <div class="wrap bio-grid">
-        <div class="bio-label"><div class="eyebrow">Biography</div><div class="bio-bottom">Our point of view</div></div>
+        <div class="bio-label">
+          <div class="eyebrow">Biography</div>
+          <div class="bio-bottom">Our point of view</div>
+          <div class="bio-brand-art" aria-label="Raiders Club logo">
+            <span class="bio-brand-mark" aria-hidden="true"><svg viewBox="0 0 200 200" fill="none"><path d="M100 16 123 44 160 30 151 74 177 100 151 126 160 170 123 156 100 184 77 156 40 170 49 126 23 100 49 74 40 30 77 44 100 16Z" stroke="currentColor" stroke-width="4"/><path d="M59 76 85 88 100 67 115 88 141 76 132 111 112 128 100 151 88 128 68 111 59 76Z" fill="currentColor"/><path d="M76 104 92 109 100 98 108 109 124 104 115 119 100 128 85 119 76 104Z" fill="#080808"/></svg></span>
+            <span class="bio-brand-name">RAIDERS<br>CLUB</span>
+            <span class="bio-brand-caption">Strategy · Community · Growth</span>
+          </div>
+        </div>
         <div class="bio-copy">
           <h2>4 YEARS OF BUILDING THE FUTURE.</h2>
           <p>We are a crypto marketing specialist focused on strategic project exposure, community growth, and targeted audience engagement. We help projects expand their reach, connect with relevant investors, and build visibility across active communities and international markets.</p>
